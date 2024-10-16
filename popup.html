@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webtime Tracker</title>
+  <style>
+    body {
+      width: 300px;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    #stats {
+      margin-top: 20px;
+    }
+    .stat-item {
+      margin-bottom: 10px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #clear-data {
+      background-color: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <h1>Webtime Tracker</h1>
+  <div id="stats">
+    <div class="stat-item">
+      <strong>Total time today:</strong> <span id="total-time"></span>
+    </div>
+    <div class="stat-item">
+      <strong>Top sites today:</strong>
+      <ul id="top-sites"></ul>
+    </div>
+  </div>
+  <button id="view-details">View Detailed Stats</button>
+  <button id="clear-data">Clear Data</button>
+  <script src="popup.js"></script>
+</body>
+</html>

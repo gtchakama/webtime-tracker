@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "Webtime Tracker",
+    "version": "1.0",
+    "description": "Tracks how you spend time on the web and presents stats in a useful way.",
+    "permissions": [
+      "storage",
+      "tabs",
+      "idle",
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["stats.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
